@@ -15,22 +15,12 @@
 
 <body>
     <div class="app-container">
+        <div id="landscape-warning">
+            <p>Please rotate your device to landscape mode</p>
+        </div>
         <video id="camera-feed" autoplay playsinline muted></video>
 
-        <!-- SVG Mask Definition -->
-        <svg width="0" height="0" style="position: absolute;">
-            <defs>
-                <mask id="hole-mask" x="0" y="0" width="1" height="1" maskContentUnits="userSpaceOnUse">
-                    <!-- White background (opaque) - Size = Grid(344x168) + Padding(48x48) -->
-                    <rect x="0" y="0" width="392" height="216" fill="white" />
-                    <!-- Black holes (transparent) -->
-                    <!-- Row 1, Col 1: x=24, y=24 -->
-                    <rect x="24" y="24" width="80" height="80" fill="black" rx="12" />
-                    <!-- Row 2, Col 3: x=24+(80+8)*2=200, y=24+(80+8)=112 -->
-                    <rect x="200" y="112" width="80" height="80" fill="black" rx="12" />
-                </mask>
-            </defs>
-        </svg>
+        <!-- SVG Mask Removed - Using CSS Background Image instead -->
 
         <div class="overlay-container">
             <div class="crossword-grid">
